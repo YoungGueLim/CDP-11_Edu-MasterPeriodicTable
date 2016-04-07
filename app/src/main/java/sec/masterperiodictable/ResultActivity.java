@@ -1,0 +1,89 @@
+package sec.masterperiodictable;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.text.Html;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+
+import sec.masterperiodictable.Data.Atom;
+import sec.masterperiodictable.Data.MoleList;
+import sec.masterperiodictable.Data.PeriodicTable;
+
+public class ResultActivity extends Activity {
+
+    public static String NO = "NO";
+
+    public static ArrayList<Integer> arrayList;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_result);
+
+        Intent intent = getIntent();
+        int flag = intent.getIntExtra(NO, 2);
+
+        TextView textView1 = (TextView) findViewById(R.id.resultSymbolView);
+        TextView textView2 = (TextView) findViewById(R.id.resultFormulaView);
+        TextView textView3 = (TextView) findViewById(R.id.resultDesView);
+
+        arrayList = new ArrayList<Integer>();
+        ArrayList<String> arrayList2 = new ArrayList<String>();
+
+        if (PeriodicTable.red != null)
+            for (int num : PeriodicTable.red) {
+                arrayList.add(num);
+            }
+
+        if (PeriodicTable.yellow != null)
+            for (int num : PeriodicTable.yellow) {
+                arrayList.add(num);
+            }
+
+        if (flag == 2) {
+            textView1.setText("");
+            textView2.setText("");
+            textView3.setText("");
+        } else {
+            for (int set : arrayList) {
+                arrayList2.add(MainActivity.moleList.getMlist().get(set).getK_name());
+            }
+
+            ListView listView = (ListView) findViewById(R.id.resultListView);
+            listView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arrayList2));
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    TextView sym = (TextView) findViewById(R.id.resultSymbolView);
+                    TextView formula = (TextView) findViewById(R.id.resultFormulaView);
+                    TextView des = (TextView) findViewById(R.id.resultDesView);
+
+                    String temp2 = MainActivity.moleList.getMlist().get(arrayList.get(position)).getM_for() + "\n" +
+                            MainActivity.moleList.getMlist().get(arrayList.get(position)).getK_name();
+
+                    sym.setText(Html.fromHtml(temp2));
+                    formula.setText(Html.fromHtml(MainActivity.moleList.getMlist().get(arrayList.get(position)).getC_for()));
+                    des.setText(Html.fromHtml(MainActivity.moleList.getMlist().get(arrayList.get(position)).getDes()));
+                }
+            });
+
+            TextView textView4 = (TextView) findViewById(R.id.resultTextView);
+            textView4.setText("");
+
+            String temp2 = MainActivity.moleList.getMlist().get(arrayList.get(0)).getM_for() + "\n" +
+                    MainActivity.moleList.getMlist().get(arrayList.get(0)).getK_name();
+
+            textView1.setText(Html.fromHtml(temp2));
+            textView2.setText(Html.fromHtml(MainActivity.moleList.getMlist().get(arrayList.get(0)).getC_for()));
+            textView3.setText(Html.fromHtml(MainActivity.moleList.getMlist().get(arrayList.get(0)).getDes()));
+        }
+    }
+
+}

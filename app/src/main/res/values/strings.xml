@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Master Periodic Table</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="btn1"> 합성화 </string>
+    <string name="btn2"> 이온화 </string>
+    <string name="btn3">초기화</string>
+    <string name="title_activity_atom__info">Atom_Info</string>
+    <string name="title_activity_help">HelpActivity</string>
+    <string name="title_activity_result">ResultActivity</string>
+    <string name="title_activity_setting">SettingActivity</string>
+
+
 </resources>

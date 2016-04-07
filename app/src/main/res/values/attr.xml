@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AtomView">
+        <attr name="atomNumber" format="integer" />
+        <attr name="atomSymbol" format="string" />
+        <attr name="atomName" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="ButtonView">
+        <attr name="buttonName" format="string" />
+    </declare-styleable>
+</resources>

@@ -1,16 +1,318 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#003300"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.narsha.five.masterperiodictable.MainActivity">
+    android:weightSum="5"
+    tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="8">
+
+        <sec.masterperiodictable.CustomView.AtomView
+            android:id="@+id/atomView1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            custom:atomName="수소"
+            custom:atomNumber="1"
+            custom:atomSymbol="H" />
+
+        <TextView
+            android:id="@+id/titleView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_weight="6"
+            android:gravity="center"
+            android:text="Master Periodic Table"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF" />
+
+        <sec.masterperiodictable.CustomView.AtomView
+            android:id="@+id/atomView2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            custom:atomName="헬륨"
+            custom:atomNumber="2"
+            custom:atomSymbol="He" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="8">
+
+        <sec.masterperiodictable.CustomView.AtomView
+            android:id="@+id/atomView3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            custom:atomName="헬륨"
+            custom:atomNumber="2"
+            custom:atomSymbol="He" />
+
+        <sec.masterperiodictable.CustomView.AtomView
+            android:id="@+id/atomView4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            custom:atomName="헬륨"
+            custom:atomNumber="2"
+            custom:atomSymbol="He" />
+
+        <sec.masterperiodictable.CustomView.AtomView
+            android:id="@+id/atomView5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            custom:atomName="헬륨"
+            custom:atomNumber="2"
+            custom:atomSymbol="He" />
+
+        <sec.masterperiodictable.CustomView.AtomView
+            android:id="@+id/atomView6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            custom:atomName="헬륨"
+            custom:atomNumber="2"
+            custom:atomSymbol="He" />
+
+        <sec.masterperiodictable.CustomView.AtomView
+            android:id="@+id/atomView7"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            custom:atomName="헬륨"
+            custom:atomNumber="2"
+            custom:atomSymbol="He" />
+
+        <sec.masterperiodictable.CustomView.AtomView
+            android:id="@+id/atomView8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            custom:atomName="헬륨"
+            custom:atomNumber="2"
+            custom:atomSymbol="He" />
+
+        <sec.masterperiodictable.CustomView.AtomView
+            android:id="@+id/atomView9"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            custom:atomName="헬륨"
+            custom:atomNumber="2"
+            custom:atomSymbol="He" />
+
+        <sec.masterperiodictable.CustomView.AtomView
+            android:id="@+id/atomView10"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            custom:atomName="헬륨"
+            custom:atomNumber="2"
+            custom:atomSymbol="He" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="8">
+
+        <sec.masterperiodictable.CustomView.AtomView
+            android:id="@+id/atomView11"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            custom:atomName="헬륨"
+            custom:atomNumber="2"
+            custom:atomSymbol="He" />
+
+        <sec.masterperiodictable.CustomView.AtomView
+            android:id="@+id/atomView12"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            custom:atomName="헬륨"
+            custom:atomNumber="2"
+            custom:atomSymbol="He" />
+
+        <sec.masterperiodictable.CustomView.AtomView
+            android:id="@+id/atomView13"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            custom:atomName="헬륨"
+            custom:atomNumber="2"
+            custom:atomSymbol="He" />
+
+        <sec.masterperiodictable.CustomView.AtomView
+            android:id="@+id/atomView14"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            custom:atomName="헬륨"
+            custom:atomNumber="2"
+            custom:atomSymbol="He" />
+
+        <sec.masterperiodictable.CustomView.AtomView
+            android:id="@+id/atomView15"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            custom:atomName="헬륨"
+            custom:atomNumber="2"
+            custom:atomSymbol="He" />
+
+        <sec.masterperiodictable.CustomView.AtomView
+            android:id="@+id/atomView16"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            custom:atomName="헬륨"
+            custom:atomNumber="2"
+            custom:atomSymbol="He" />
+
+        <sec.masterperiodictable.CustomView.AtomView
+            android:id="@+id/atomView17"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            custom:atomName="헬륨"
+            custom:atomNumber="2"
+            custom:atomSymbol="He" />
+
+        <sec.masterperiodictable.CustomView.AtomView
+            android:id="@+id/atomView18"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            custom:atomName="헬륨"
+            custom:atomNumber="2"
+            custom:atomSymbol="He" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="8">
+
+        <sec.masterperiodictable.CustomView.AtomView
+            android:id="@+id/atomView19"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            custom:atomName="헬륨"
+            custom:atomNumber="2"
+            custom:atomSymbol="He" />
+
+        <sec.masterperiodictable.CustomView.AtomView
+            android:id="@+id/atomView20"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            custom:atomName="헬륨"
+            custom:atomNumber="2"
+            custom:atomSymbol="He" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="18dp"
+            android:layout_weight="6"></FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="8">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="12dp"
+            android:layout_weight="4"></FrameLayout>
+
+        <sec.masterperiodictable.CustomView.ButtonView
+            android:id="@+id/btn_combination"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:onClick="search"
+            custom:buttonName="검색" />
+
+        <sec.masterperiodictable.CustomView.ButtonView
+            android:id="@+id/btn_ionization"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:onClick="ionize"
+            custom:buttonName="이온화" />
+
+        <sec.masterperiodictable.CustomView.ButtonView
+            android:id="@+id/btn_initialization"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:onClick="initialize"
+            custom:buttonName="초기화" />
+
+        <sec.masterperiodictable.CustomView.ButtonView
+            android:id="@+id/btn_help"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:onClick="help"
+            custom:buttonName="도움말" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
