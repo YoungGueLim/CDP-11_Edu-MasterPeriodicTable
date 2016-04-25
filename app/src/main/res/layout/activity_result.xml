@@ -57,6 +57,14 @@
                 android:text="수소"
                 android:textSize="20dp" />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3D 모델"
+                android:id="@+id/modelButton"
+                android:layout_weight="0.25"
+                android:layout_gravity="center_horizontal" />
+
         </LinearLayout>
     </LinearLayout>
 

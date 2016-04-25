@@ -7,6 +7,7 @@ import android.text.Html;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -22,12 +23,14 @@ public class ResultActivity extends Activity {
 
     public static ArrayList<Integer> arrayList;
 
+    private int location = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        Intent intent = getIntent();
+        final Intent intent = getIntent();
         int flag = intent.getIntExtra(NO, 2);
 
         TextView textView1 = (TextView) findViewById(R.id.resultSymbolView);
@@ -56,6 +59,8 @@ public class ResultActivity extends Activity {
                 arrayList2.add(MainActivity.moleList.getMlist().get(set).getK_name());
             }
 
+            Button button = (Button) findViewById(R.id.modelButton);
+
             ListView listView = (ListView) findViewById(R.id.resultListView);
             listView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arrayList2));
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -71,6 +76,8 @@ public class ResultActivity extends Activity {
                     sym.setText(Html.fromHtml(temp2));
                     formula.setText(Html.fromHtml(MainActivity.moleList.getMlist().get(arrayList.get(position)).getC_for()));
                     des.setText(Html.fromHtml(MainActivity.moleList.getMlist().get(arrayList.get(position)).getDes()));
+
+                    location = position;
                 }
             });
 
@@ -83,6 +90,14 @@ public class ResultActivity extends Activity {
             textView1.setText(Html.fromHtml(temp2));
             textView2.setText(Html.fromHtml(MainActivity.moleList.getMlist().get(arrayList.get(0)).getC_for()));
             textView3.setText(Html.fromHtml(MainActivity.moleList.getMlist().get(arrayList.get(0)).getDes()));
+
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent1 = new Intent(getApplicationContext(), ObjectReaderActivity.class);
+                    startActivity(intent1);
+                }
+            });
         }
     }
 

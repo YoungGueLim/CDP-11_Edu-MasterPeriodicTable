@@ -1,0 +1,7 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 06.04.2016 15:15:08
+newmtl 01___Default
+newmtl 03___Default
+newmtl 02___Default
+newmtl 07___Default
+map_Kd camaro.jpg

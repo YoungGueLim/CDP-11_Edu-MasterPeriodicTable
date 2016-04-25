@@ -43,7 +43,6 @@ public class MoleList {
                 "수용액은 강한 알칼리성을 띠며 산으로 황화수소를 발생한다.");
         mlist.add(temp);
 
-
         temp = new Molecule(count++, "탄산", "H<sub><small>2</small></sub>CO<sub><small>3</small></sub>", "HCO<sub><small>3</small></sub><sup><small>-</small></sup> " +
                 "+ H<sup><small>+</small></sup> -> H<sub><small>2</small></sub>CO<sub><small>3</small></sub>");
         temp.add_Key(1);
