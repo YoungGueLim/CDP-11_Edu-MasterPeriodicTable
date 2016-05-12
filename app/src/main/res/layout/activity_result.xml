@@ -3,10 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="sec.masterperiodictable.ResultActivity">
 
     <LinearLayout
@@ -25,6 +21,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
+            android:background="#87CE00"
             android:orientation="vertical">
 
             <TextView
@@ -34,6 +31,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_weight="2"
                 android:gravity="center"
+                android:textColor="#FFFFFF"
                 android:text="H"
                 android:textSize="30dp" />
 
@@ -43,9 +41,13 @@
                 android:layout_height="0dp"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1"
+                android:paddingLeft="16dp"
+                android:paddingRight="10dp"
+                android:textColor="#FFFFFF"
                 android:text="수소"
                 android:textSize="20dp"
-                android:gravity="top|center" />
+                android:gravity="top|center"
+                android:scrollbars="horizontal"/>
 
             <TextView
                 android:id="@+id/resultDesView"
@@ -53,9 +55,14 @@
                 android:layout_height="0dp"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="4"
-                android:gravity="top|center"
+                android:gravity="top|left"
+                android:textColor="#FFFFFF"
                 android:text="수소"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="10dp"
+                android:scrollbars="vertical"
+                />
 
             <Button
                 android:layout_width="match_parent"
@@ -63,6 +70,8 @@
                 android:text="3D 모델"
                 android:id="@+id/modelButton"
                 android:layout_weight="0.25"
+                android:background="#00C6ED"
+                android:textColor="#FFFFFF"
                 android:layout_gravity="center_horizontal" />
 
         </LinearLayout>
