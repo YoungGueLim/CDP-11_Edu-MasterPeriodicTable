@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -36,6 +37,9 @@ public class ResultActivity extends Activity {
         TextView textView1 = (TextView) findViewById(R.id.resultSymbolView);
         TextView textView2 = (TextView) findViewById(R.id.resultFormulaView);
         TextView textView3 = (TextView) findViewById(R.id.resultDesView);
+
+        textView2.setMovementMethod(new ScrollingMovementMethod());
+        textView3.setMovementMethod(new ScrollingMovementMethod());
 
         arrayList = new ArrayList<Integer>();
         ArrayList<String> arrayList2 = new ArrayList<String>();
