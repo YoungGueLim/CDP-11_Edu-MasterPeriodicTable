@@ -29,7 +29,7 @@ public class ObjectReaderActivity extends RendererActivity implements GestureDet
         scene.lights().add(myLight);
 
         IParser myParser = Parser.createParser(Parser.Type.OBJ, getResources(),
-                "sec.masterperiodictable:raw/test_obj", true);
+                "sec.masterperiodictable:raw/tes_obj", true);
         myParser.parse();
 
         molecule = myParser.getParsedObject();
@@ -73,10 +73,9 @@ public class ObjectReaderActivity extends RendererActivity implements GestureDet
 
     @Override
     public void onShowPress(MotionEvent e) {
-        /*
         molecule.scale().x += 0.01F;
         molecule.scale().y += 0.01F;
-        molecule.scale().z += 0.01F;*/
+        molecule.scale().z += 0.01F;
     }
 
     @Override

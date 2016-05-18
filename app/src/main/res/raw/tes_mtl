@@ -1,0 +1,12 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 12.05.2016 11:30:49
+newmtl 03___Default
+map_Kd mapping1.bmp
+newmtl 08___Default
+map_Kd mapping1.bmp
+newmtl 07___Default
+map_Kd mapping1.bmp
+newmtl 09___Default
+map_Kd mapping4.bmp
+newmtl 13___Default
+map_Kd mapping4.bmp
