@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -26,6 +27,8 @@ public class ResultActivity extends Activity {
 
     private int location = 0;
 
+    private Intent intent1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +37,7 @@ public class ResultActivity extends Activity {
         final Intent intent = getIntent();
         int flag = intent.getIntExtra(NO, 2);
 
-        TextView textView1 = (TextView) findViewById(R.id.resultSymbolView);
+        final TextView textView1 = (TextView) findViewById(R.id.resultSymbolView);
         TextView textView2 = (TextView) findViewById(R.id.resultFormulaView);
         TextView textView3 = (TextView) findViewById(R.id.resultDesView);
 
@@ -95,14 +98,56 @@ public class ResultActivity extends Activity {
             textView2.setText(Html.fromHtml(MainActivity.moleList.getMlist().get(arrayList.get(0)).getC_for()));
             textView3.setText(Html.fromHtml(MainActivity.moleList.getMlist().get(arrayList.get(0)).getDes()));
 
+            Log.d("tag",MainActivity.moleList.getMlist().get(arrayList.get(0)).getK_name());
+
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent1 = new Intent(getApplicationContext(), ObjectReaderActivity.class);
+                    intent1 = new Intent(getApplicationContext(), ObjectReaderActivity.class);
+                    if(textView1.getText().toString().contains("물")){
+                        Log.d("물","물");
+                        intent1.putExtra("MoleType","tes_obj");
+                    }else if(textView1.getText().toString().contains("포도당"))
+                    {
+                        Log.d("포도당","포도당");
+                        intent1.putExtra("MoleType","glucose_obj");
+                    }else if(textView1.getText().toString().contains("암모니아"))
+                    {
+                        Log.d("암모니아","암모니아");
+                        intent1.putExtra("MoleType","ammonia_obj");
+                    }else if(textView1.getText().toString().contains("메탄"))
+                    {
+                        Log.d("메탄","메탄");
+                        intent1.putExtra("MoleType","metan_obj");
+                    }else if(textView1.getText().toString().contains("에탄"))
+                    {
+                        Log.d("에탄","에탄");
+                        intent1.putExtra("MoleType","ethane_obj");
+                    }else if(textView1.getText().toString().contains("아세트아미노펜"))
+                    {
+                        Log.d("아세트아미노펜","아세트아미노펜");
+                        intent1.putExtra("MoleType","tylenol_obj");
+                    }else{
+                        Log.d("물","물");
+                        intent1.putExtra("MoleType","tes_obj");
+                        Log.d("False","False11");
+                    }
                     startActivity(intent1);
                 }
             });
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        intent1 = null;
+
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        intent1 = null;
+    }
 }

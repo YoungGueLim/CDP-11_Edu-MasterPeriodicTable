@@ -1,7 +1,9 @@
 package sec.masterperiodictable;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 
@@ -28,8 +30,13 @@ public class ObjectReaderActivity extends RendererActivity implements GestureDet
         myLight.diffuse.setAll(10, 10, 10, 255);
         scene.lights().add(myLight);
 
+        Log.d("moleType1","11111111111");
+        Intent intent_ora = getIntent();
+        String moleType = intent_ora.getStringExtra("MoleType");
+        Log.d("moleType",moleType);
+
         IParser myParser = Parser.createParser(Parser.Type.OBJ, getResources(),
-                "sec.masterperiodictable:raw/tes_obj", true);
+                "sec.masterperiodictable:raw/" + moleType, true);
         myParser.parse();
 
         molecule = myParser.getParsedObject();
@@ -98,6 +105,15 @@ public class ObjectReaderActivity extends RendererActivity implements GestureDet
     @Override
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
         return false;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+    @Override
+    protected void onStop() {
+        super.onStop();
     }
 
 }

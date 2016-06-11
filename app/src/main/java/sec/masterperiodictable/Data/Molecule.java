@@ -2,9 +2,11 @@ package sec.masterperiodictable.Data;
 
 import java.util.ArrayList;
 
-/**
- * Created by sec on 2015-11-06.
- */
+/*
+* Information about molecule
+*
+* */
+
 public class Molecule {
 
     private int key;

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CDP-11_Edu-MasterPeriodicTable.iml" filepath="$PROJECT_DIR$/CDP-11_Edu-MasterPeriodicTable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MPD.iml" filepath="$PROJECT_DIR$/MPD.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

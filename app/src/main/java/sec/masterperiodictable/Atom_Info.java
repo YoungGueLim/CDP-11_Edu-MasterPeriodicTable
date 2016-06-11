@@ -26,8 +26,13 @@ public class Atom_Info extends Activity {
         Intent intent = getIntent();
         int atomNumber = intent.getIntExtra(NUM, 0);
 
+        // Symbol
         TextView symbol = (TextView) findViewById(R.id.symbolView);
+
+        // Chemical Synthesis Formula
         TextView name = (TextView) findViewById(R.id.nameView);
+
+        // Description
         TextView des = (TextView) findViewById(R.id.desView);
 
         Atom temp = PeriodicTable.periodicTableList[atomNumber];

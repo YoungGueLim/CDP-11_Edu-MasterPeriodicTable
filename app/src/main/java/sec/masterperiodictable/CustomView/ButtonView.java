@@ -11,9 +11,7 @@ import android.view.View;
 
 import sec.masterperiodictable.R;
 
-/**
- * Created by sec on 2015-11-07.
- */
+
 public class ButtonView extends View {
 
     String name;

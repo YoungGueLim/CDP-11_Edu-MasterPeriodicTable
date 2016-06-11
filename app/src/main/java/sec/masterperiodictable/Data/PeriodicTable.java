@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import sec.masterperiodictable.R;
 
 /**
- * Created by sec on 2015-11-06.
  * <p/>
  * 주기율표에 들어가는 각 원자에 대한 정보를 가지고 있는 Class
  */

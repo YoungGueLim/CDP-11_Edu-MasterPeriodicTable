@@ -25,6 +25,9 @@ import sec.masterperiodictable.Data.MoleList;
 import sec.masterperiodictable.Data.Molecule;
 import sec.masterperiodictable.Data.PeriodicTable;
 
+/*
+* Main Function
+* */
 public class MainActivity extends Activity {
 
     static public boolean ionizeButton = false;
@@ -37,6 +40,7 @@ public class MainActivity extends Activity {
         initPeriodicTable();
     }
 
+    // Ionizing
     public void ionize(View v) {
 
         ButtonView buttonView;
@@ -51,10 +55,10 @@ public class MainActivity extends Activity {
 
             for (int i = 1; i < PeriodicTable.periodicTableList.length; i++) {
 
-                // 각 atomView에 ID 부여
+                // Give ID for each atomView(각 atomView에 ID 부여)
                 AtomView atomView = (AtomView) findViewById(PeriodicTable.viewId[i]);
 
-                // 각 원소에 대한 주기율표 정보를 가져옴
+                // Get the periodic table information for each atom(각 원소에 대한 주기율표 정보를 가져옴)
                 final Atom atom = PeriodicTable.periodicTableList[i];
 
                 atomView.setIon(PeriodicTable.ion[i]);
@@ -74,10 +78,10 @@ public class MainActivity extends Activity {
 
             for (int i = 1; i < PeriodicTable.periodicTableList.length; i++) {
 
-                // 각 atomView에 ID 부여
+                // Give ID for each atomView(각 atomView에 ID 부여)
                 AtomView atomView = (AtomView) findViewById(PeriodicTable.viewId[i]);
 
-                // 각 원소에 대한 주기율표 정보를 가져옴
+                // Get the periodic table information for each atom(각 원소에 대한 주기율표 정보를 가져옴)
                 final Atom atom = PeriodicTable.periodicTableList[i];
 
                 atomView.setAllColor(Color.argb(255, 255, 255, 255));
@@ -90,6 +94,7 @@ public class MainActivity extends Activity {
 
     public static MoleList moleList;
 
+    // Initialize Periodic Table
     private void initPeriodicTable() {
         moleList = new MoleList();
 
@@ -101,10 +106,10 @@ public class MainActivity extends Activity {
 
         for (int i = 1; i < PeriodicTable.periodicTableList.length; i++) {
 
-            // 각 atomView에 ID 부여
+            // Give ID for each atomView(각 atomView에 ID 부여)
             AtomView atomView = (AtomView) findViewById(PeriodicTable.viewId[i]);
 
-            // 각 원소에 대한 주기율표 정보를 가져옴
+            // Get the periodic table information for each atom(각 원소에 대한 주기율표 정보를 가져옴)
             final Atom atom = PeriodicTable.periodicTableList[i];
 
             atomView.setNumber(atom.getA_num());

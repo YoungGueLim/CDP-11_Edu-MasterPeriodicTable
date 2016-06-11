@@ -2,9 +2,7 @@ package sec.masterperiodictable.Data;
 
 import java.util.ArrayList;
 
-/**
- * Created by sec on 2015-11-07.
- */
+
 public class MoleList {
 
     ArrayList<Molecule> mlist = new ArrayList<Molecule>();
@@ -390,6 +388,37 @@ public class MoleList {
         temp.add_Key(20);
         temp.setDes("칼슘의 수산화물로, 화학식 Ca(OH)2의 백색 분말 형태의 염기성 화합물인데, 이산화탄소의 검출과 이산화탄소에 의한 온실 효과를 줄이는데 이용된다.");
         mlist.add(temp);
+
+        temp = new Molecule(count++, "포도당", "C<sub><small>6</small></sub>H<sub><small>12</small></sub>O<sub><small>6</small></sub>", "6CO<sub><small>2</small></sub> " +
+                "+ 12H<sub><small>2</small></sub>O -> C<sub><small>6</small></sub>H<sub><small>12</small></sub>O<sub><small>12</small></sub>" + "+ 6O<sub><small>2</small></sub>O" + "+ 6H<sub><small>2</small></sub>O");
+        temp.add_Key(1);
+        temp.add_Key(6);
+        temp.add_Key(8);
+        temp.setDes("대표적인 알도헥소스(탄소 6개를 가지며 알데하이드기를 가지는 단당류)이며 D-글루코스를 포도당이라 한다. 탄수화물 대사의 중심적 화합물로서 한 분자당 38개의 ATP를 합성할 수 있다.");
+        mlist.add(temp);
+
+        temp = new Molecule(count++, "메탄", "CH<sub><small>4</small></sub>", "C " +
+                "+ 2H<sub><small>2</small></sub> -> CH<sub><small>4</small></sub>");
+        temp.add_Key(1);
+        temp.add_Key(6);
+        temp.setDes("가장 간단한 유기 화합물로, 화학식은 CH4이며 천연 가스의 주성분이다. 무색, 무취인 가연성 기체로서, 끓는점이 -164℃로 매우 낮으므로 액화가 매우 어렵다. 메탄의 구조는 정사면체의 중심에 탄소가 있고 정사면체의 꼭짓점에 수소가 있는 모양이다. 대칭 구조이므로 무극성을 띠고, 물에 용해되기 어렵다. 메탄 분자를 구성하는 탄소 원자와 수소 원자의 결합이 비교적 안정하기 때문에 쉽게 반응하지 않지만, 자외선을 쬐면 탄소와 수소의 결합이 끊어지면서 탄소와 염소의 결합이 형성된다.");
+        mlist.add(temp);
+
+        temp = new Molecule(count++, "에탄", "C<sub><small>2</small></sub>H<sub><small>6</small></sub>", "C " +
+                "+ 2H<sub><small>2</small></sub> -> CH<sub><small>4</small></sub>");
+        temp.add_Key(1);
+        temp.add_Key(6);
+        temp.setDes("가장 간단한 유기 화합물로, 화학식은 CH4이며 천연 가스의 주성분이다. 무색, 무취인 가연성 기체로서, 끓는점이 -164℃로 매우 낮으므로 액화가 매우 어렵다. 메탄의 구조는 정사면체의 중심에 탄소가 있고 정사면체의 꼭짓점에 수소가 있는 모양이다. 대칭 구조이므로 무극성을 띠고, 물에 용해되기 어렵다. 메탄 분자를 구성하는 탄소 원자와 수소 원자의 결합이 비교적 안정하기 때문에 쉽게 반응하지 않지만, 자외선을 쬐면 탄소와 수소의 결합이 끊어지면서 탄소와 염소의 결합이 형성된다.");
+        mlist.add(temp);
+
+        temp = new Molecule(count++, "아세트아미노펜", "C<sub><small>2</small></sub>H<sub><small>6</small></sub>", "C " +
+                "+ 2H<sub><small>2</small></sub> -> CH<sub><small>4</small></sub>");
+        temp.add_Key(1);
+        temp.add_Key(6);
+        temp.setDes("진통해열제의 성분명. 항염증 효과는 약하지만 진통 및 해열 효과가 뛰어나 발열이나 통증, 두통, 치통 등을 가라앉히는 데 널리 쓰인다.");
+        mlist.add(temp);
+
+        //에탄 아세트아미노펜 분자식 및 반응식 보충 필요!!!!!!!!!!!!!!!!!!!!
     }
 
     public ArrayList<Molecule> getMlist() {

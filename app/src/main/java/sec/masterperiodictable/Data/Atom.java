@@ -2,11 +2,14 @@ package sec.masterperiodictable.Data;
 
 import java.util.ArrayList;
 
-/**
- * Created by sec on 2015-11-06.
+/** *
  * <p/>
  * 원자에 대한 정보를 Setting 하고 Getting.
  * 원자번호, 한글이름, 영어이름, 기호, 평균원자량, 녹는점, 끓는점, 상세설명 에 대한 Setter 과 Getter 함수를 구현.
+ */
+/**
+ * Setting and Getting about atom information
+ * Implement setter and getter function about Atom number, Korean name, English name, Symbol, Average atomic weight, Melting Point, Boiling Point, Description.
  */
 public class Atom {
 
