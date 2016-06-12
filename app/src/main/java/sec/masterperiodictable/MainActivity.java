@@ -74,7 +74,7 @@ public class MainActivity extends Activity {
             ionizeButton = false;
 
             imageButton1 = (ImageButton) findViewById(R.id.btn_ionization);
-            imageButton1.setBackgroundResource(R.drawable.ionize_oragne);
+            imageButton1.setBackgroundResource(R.drawable.ionize_new_btn);
 
             for (int i = 1; i < PeriodicTable.periodicTableList.length; i++) {
 

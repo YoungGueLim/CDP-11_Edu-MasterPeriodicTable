@@ -245,7 +245,7 @@
             android:layout_margin="3dp"
             android:layout_weight="1"
             android:onClick="search"
-            android:background="@drawable/search_orange"/>
+            android:background="@drawable/search_new_btn"/>
 
         <ImageButton
             android:id="@+id/btn_ionization"
@@ -254,7 +254,7 @@
             android:layout_margin="3dp"
             android:layout_weight="1"
             android:onClick="ionize"
-            android:background="@drawable/ionize_oragne" />
+            android:background="@drawable/ionize_new_btn" />
 
         <ImageButton
             android:id="@+id/btn_initialization"
@@ -263,7 +263,7 @@
             android:layout_margin="3dp"
             android:layout_weight="1"
             android:onClick="initialize"
-            android:background="@drawable/init_orange"/>
+            android:background="@drawable/init_new_btn"/>
 
         <ImageButton
             android:id="@+id/btn_help"
@@ -272,7 +272,7 @@
             android:layout_margin="3dp"
             android:layout_weight="1"
             android:onClick="help"
-            android:background="@drawable/help_orange"/>
+            android:background="@drawable/help_new_btn"/>
 
     </LinearLayout>
 

@@ -7,21 +7,20 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/info_background"
     tools:context="sec.masterperiodictable.Atom_Info">
 
     <ListView
         android:id="@+id/listView"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="#fbf244" />
+        android:layout_weight="1" />
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="2"
-        android:orientation="vertical"
-        android:background="#87CE00">
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"

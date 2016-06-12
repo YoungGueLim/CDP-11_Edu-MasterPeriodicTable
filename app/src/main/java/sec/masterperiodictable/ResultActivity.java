@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -72,7 +73,7 @@ public class ResultActivity extends Activity {
                 arrayList2.add(MainActivity.moleList.getMlist().get(set).getK_name());
             }
 
-            Button button = (Button) findViewById(R.id.modelButton);
+            ImageButton button = (ImageButton) findViewById(R.id.modelButton);
 
             ListView listView = (ListView) findViewById(R.id.resultListView);
             listView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arrayList2));
