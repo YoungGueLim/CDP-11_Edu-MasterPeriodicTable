@@ -2,6 +2,7 @@ package sec.masterperiodictable;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.method.ScrollingMovementMethod;
@@ -33,6 +34,7 @@ public class ResultActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+        Typeface font = Typeface.createFromAsset(this.getAssets(),"InterparkGothicBold.ttf");
 
         final Intent intent = getIntent();
         int flag = intent.getIntExtra(NO, 2);
@@ -40,6 +42,10 @@ public class ResultActivity extends Activity {
         final TextView textView1 = (TextView) findViewById(R.id.resultSymbolView);
         TextView textView2 = (TextView) findViewById(R.id.resultFormulaView);
         TextView textView3 = (TextView) findViewById(R.id.resultDesView);
+
+        textView1.setTypeface(font);
+        textView2.setTypeface(font);
+        textView3.setTypeface(font);
 
         textView2.setMovementMethod(new ScrollingMovementMethod());
         textView3.setMovementMethod(new ScrollingMovementMethod());

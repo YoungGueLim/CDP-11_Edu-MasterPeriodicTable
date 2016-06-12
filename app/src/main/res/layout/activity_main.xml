@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#003300"
+    android:background="@drawable/title2"
     android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -19,15 +19,13 @@
         android:orientation="horizontal"
         android:weightSum="8">
 
-        <sec.masterperiodictable.CustomView.AtomView
+        <ImageButton
             android:id="@+id/atomView1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            custom:atomName="수소"
-            custom:atomNumber="1"
-            custom:atomSymbol="H" />
+            android:background="@drawable/ionize1" />
 
         <TextView
             android:id="@+id/titleView"
@@ -39,17 +37,17 @@
             android:gravity="center"
             android:text="Master Periodic Table"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#FFFFFF" />
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="33dp"/>
 
-        <sec.masterperiodictable.CustomView.AtomView
+        <ImageButton
             android:id="@+id/atomView2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            custom:atomName="헬륨"
-            custom:atomNumber="2"
-            custom:atomSymbol="He" />
+            android:background="@drawable/ionize1" />
     </LinearLayout>
 
     <LinearLayout
@@ -59,85 +57,69 @@
         android:orientation="horizontal"
         android:weightSum="8">
 
-        <sec.masterperiodictable.CustomView.AtomView
+        <ImageButton
             android:id="@+id/atomView3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            custom:atomName="헬륨"
-            custom:atomNumber="2"
-            custom:atomSymbol="He" />
+            android:background="@drawable/ionize1" />
 
-        <sec.masterperiodictable.CustomView.AtomView
+        <ImageButton
             android:id="@+id/atomView4"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            custom:atomName="헬륨"
-            custom:atomNumber="2"
-            custom:atomSymbol="He" />
+            android:background="@drawable/ionize1" />
 
-        <sec.masterperiodictable.CustomView.AtomView
+        <ImageButton
             android:id="@+id/atomView5"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            custom:atomName="헬륨"
-            custom:atomNumber="2"
-            custom:atomSymbol="He" />
+            android:background="@drawable/ionize1" />
 
-        <sec.masterperiodictable.CustomView.AtomView
+        <ImageButton
             android:id="@+id/atomView6"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            custom:atomName="헬륨"
-            custom:atomNumber="2"
-            custom:atomSymbol="He" />
+            android:background="@drawable/ionize1" />
 
-        <sec.masterperiodictable.CustomView.AtomView
+        <ImageButton
             android:id="@+id/atomView7"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            custom:atomName="헬륨"
-            custom:atomNumber="2"
-            custom:atomSymbol="He" />
+            android:background="@drawable/ionize1" />
 
-        <sec.masterperiodictable.CustomView.AtomView
+        <ImageButton
             android:id="@+id/atomView8"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            custom:atomName="헬륨"
-            custom:atomNumber="2"
-            custom:atomSymbol="He" />
+            android:background="@drawable/ionize1" />
 
-        <sec.masterperiodictable.CustomView.AtomView
+        <ImageButton
             android:id="@+id/atomView9"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            custom:atomName="헬륨"
-            custom:atomNumber="2"
-            custom:atomSymbol="He" />
+            android:background="@drawable/ionize1" />
 
-        <sec.masterperiodictable.CustomView.AtomView
+        <ImageButton
             android:id="@+id/atomView10"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            custom:atomName="헬륨"
-            custom:atomNumber="2"
-            custom:atomSymbol="He" />
+            android:background="@drawable/ionize1" />
     </LinearLayout>
 
     <LinearLayout
@@ -147,85 +129,69 @@
         android:orientation="horizontal"
         android:weightSum="8">
 
-        <sec.masterperiodictable.CustomView.AtomView
+        <ImageButton
             android:id="@+id/atomView11"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            custom:atomName="헬륨"
-            custom:atomNumber="2"
-            custom:atomSymbol="He" />
+            android:background="@drawable/ionize1" />
 
-        <sec.masterperiodictable.CustomView.AtomView
+        <ImageButton
             android:id="@+id/atomView12"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            custom:atomName="헬륨"
-            custom:atomNumber="2"
-            custom:atomSymbol="He" />
+            android:background="@drawable/ionize1" />
 
-        <sec.masterperiodictable.CustomView.AtomView
+        <ImageButton
             android:id="@+id/atomView13"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            custom:atomName="헬륨"
-            custom:atomNumber="2"
-            custom:atomSymbol="He" />
+            android:background="@drawable/ionize1" />
 
-        <sec.masterperiodictable.CustomView.AtomView
+        <ImageButton
             android:id="@+id/atomView14"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            custom:atomName="헬륨"
-            custom:atomNumber="2"
-            custom:atomSymbol="He" />
+            android:background="@drawable/ionize1" />
 
-        <sec.masterperiodictable.CustomView.AtomView
+        <ImageButton
             android:id="@+id/atomView15"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            custom:atomName="헬륨"
-            custom:atomNumber="2"
-            custom:atomSymbol="He" />
+            android:background="@drawable/ionize1" />
 
-        <sec.masterperiodictable.CustomView.AtomView
+        <ImageButton
             android:id="@+id/atomView16"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            custom:atomName="헬륨"
-            custom:atomNumber="2"
-            custom:atomSymbol="He" />
+            android:background="@drawable/ionize1" />
 
-        <sec.masterperiodictable.CustomView.AtomView
+        <ImageButton
             android:id="@+id/atomView17"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            custom:atomName="헬륨"
-            custom:atomNumber="2"
-            custom:atomSymbol="He" />
+            android:background="@drawable/ionize1" />
 
-        <sec.masterperiodictable.CustomView.AtomView
+        <ImageButton
             android:id="@+id/atomView18"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            custom:atomName="헬륨"
-            custom:atomNumber="2"
-            custom:atomSymbol="He" />
+            android:background="@drawable/ionize1" />
 
     </LinearLayout>
 
@@ -236,25 +202,21 @@
         android:orientation="horizontal"
         android:weightSum="8">
 
-        <sec.masterperiodictable.CustomView.AtomView
+        <ImageButton
             android:id="@+id/atomView19"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            custom:atomName="헬륨"
-            custom:atomNumber="2"
-            custom:atomSymbol="He" />
+            android:background="@drawable/ionize1" />
 
-        <sec.masterperiodictable.CustomView.AtomView
+        <ImageButton
             android:id="@+id/atomView20"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            custom:atomName="헬륨"
-            custom:atomNumber="2"
-            custom:atomSymbol="He" />
+            android:background="@drawable/ionize1" />
 
         <FrameLayout
             android:layout_width="0dp"
@@ -276,41 +238,41 @@
             android:layout_margin="12dp"
             android:layout_weight="4"></FrameLayout>
 
-        <sec.masterperiodictable.CustomView.ButtonView
+        <ImageButton
             android:id="@+id/btn_combination"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
             android:onClick="search"
-            custom:buttonName="검색" />
+            android:background="@drawable/search_orange"/>
 
-        <sec.masterperiodictable.CustomView.ButtonView
+        <ImageButton
             android:id="@+id/btn_ionization"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
             android:onClick="ionize"
-            custom:buttonName="이온화" />
+            android:background="@drawable/ionize_oragne" />
 
-        <sec.masterperiodictable.CustomView.ButtonView
+        <ImageButton
             android:id="@+id/btn_initialization"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
             android:onClick="initialize"
-            custom:buttonName="초기화" />
+            android:background="@drawable/init_orange"/>
 
-        <sec.masterperiodictable.CustomView.ButtonView
+        <ImageButton
             android:id="@+id/btn_help"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
             android:onClick="help"
-            custom:buttonName="도움말" />
+            android:background="@drawable/help_orange"/>
 
     </LinearLayout>
 

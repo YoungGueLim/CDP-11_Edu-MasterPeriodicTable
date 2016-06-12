@@ -140,6 +140,30 @@ public class PeriodicTable {
             R.id.atomView20,
     };
 
+    public static int[][] buttonId = {
+        {R.drawable.orange1,R.drawable.lightgray1,R.drawable.gray1,R.drawable.ionize1},
+            {R.drawable.orange1,R.drawable.lightgray1,R.drawable.gray1,R.drawable.ionize1},
+            {R.drawable.orange2,R.drawable.lightgray2,R.drawable.gray2,R.drawable.ionize2},
+            {R.drawable.orange3,R.drawable.lightgray3,R.drawable.gray3,R.drawable.ionize3},
+            {R.drawable.orange4,R.drawable.lightgray4,R.drawable.gray4,R.drawable.ionize4},
+            {R.drawable.orange5,R.drawable.lightgray5,R.drawable.gray5,R.drawable.ionize5},
+            {R.drawable.orange6,R.drawable.lightgray6,R.drawable.gray6,R.drawable.ionize6},
+            {R.drawable.orange7,R.drawable.lightgray7,R.drawable.gray7,R.drawable.ionize7},
+            {R.drawable.orange8,R.drawable.lightgray8,R.drawable.gray8,R.drawable.ionize8},
+            {R.drawable.orange9,R.drawable.lightgray9,R.drawable.gray9,R.drawable.ionize9},
+            {R.drawable.orange10,R.drawable.lightgray10,R.drawable.gray10,R.drawable.ionize10},
+            {R.drawable.orange11,R.drawable.lightgray11,R.drawable.gray11,R.drawable.ionize11},
+            {R.drawable.orange12,R.drawable.lightgray12,R.drawable.gray12,R.drawable.ionize12},
+            {R.drawable.orange13,R.drawable.lightgray13,R.drawable.gray13,R.drawable.ionize13},
+            {R.drawable.orange14,R.drawable.lightgray14,R.drawable.gray14,R.drawable.ionize14},
+            {R.drawable.orange15,R.drawable.lightgray15,R.drawable.gray15,R.drawable.ionize15},
+            {R.drawable.orange16,R.drawable.lightgray16,R.drawable.gray16,R.drawable.ionize16},
+            {R.drawable.orange17,R.drawable.lightgray17,R.drawable.gray17,R.drawable.ionize17},
+            {R.drawable.orange18,R.drawable.lightgray18,R.drawable.gray18,R.drawable.ionize18},
+            {R.drawable.orange19,R.drawable.lightgray19,R.drawable.gray19,R.drawable.ionize19},
+            {R.drawable.orange20,R.drawable.lightgray20,R.drawable.gray20,R.drawable.ionize20}
+    };
+
     public static ArrayList<Integer> red;
     public static ArrayList<Integer> yellow;
 

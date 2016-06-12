@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
@@ -12,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,7 +38,15 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Intent intent = new Intent(this,SplashActivity.class);
+        startActivity(intent);
+
         setContentView(R.layout.activity_main);
+
+        Typeface font = Typeface.createFromAsset(this.getAssets(),"InterparkGothicBold.ttf");
+        TextView temp = (TextView) findViewById(R.id.titleView);
+        temp.setTypeface(font);
 
         initPeriodicTable();
     }
@@ -43,51 +54,33 @@ public class MainActivity extends Activity {
     // Ionizing
     public void ionize(View v) {
 
-        ButtonView buttonView;
+        ImageButton imageButton1;
 
         if (!ionizeButton) {
             initialize(v);
 
             ionizeButton = true;
 
-            buttonView = (ButtonView) findViewById(R.id.btn_ionization);
-            buttonView.setAllColor(Color.argb(255, 153, 255, 255));
+            imageButton1 = (ImageButton) findViewById(R.id.btn_ionization);
+            imageButton1.setBackgroundResource(R.drawable.ionize_btn);
 
             for (int i = 1; i < PeriodicTable.periodicTableList.length; i++) {
 
-                // Give ID for each atomView(각 atomView에 ID 부여)
-                AtomView atomView = (AtomView) findViewById(PeriodicTable.viewId[i]);
+                final ImageButton imageButton = (ImageButton) findViewById(PeriodicTable.viewId[i]);
 
-                // Get the periodic table information for each atom(각 원소에 대한 주기율표 정보를 가져옴)
-                final Atom atom = PeriodicTable.periodicTableList[i];
-
-                atomView.setIon(PeriodicTable.ion[i]);
-
-                if (!PeriodicTable.ion[i].equals("")) {
-                    atomView.setName(atom.getK_name() + " 이온");
-                }
-
-                atomView.setAllColor(Color.argb(255, 153, 255, 255));
-                atomView.invalidate();
+                imageButton.setBackgroundResource(PeriodicTable.buttonId[i][3]);
             }
         } else {
             ionizeButton = false;
 
-            buttonView = (ButtonView) findViewById(R.id.btn_ionization);
-            buttonView.setAllColor(Color.argb(255, 255, 255, 255));
+            imageButton1 = (ImageButton) findViewById(R.id.btn_ionization);
+            imageButton1.setBackgroundResource(R.drawable.ionize_oragne);
 
             for (int i = 1; i < PeriodicTable.periodicTableList.length; i++) {
 
-                // Give ID for each atomView(각 atomView에 ID 부여)
-                AtomView atomView = (AtomView) findViewById(PeriodicTable.viewId[i]);
+                final ImageButton imageButton = (ImageButton) findViewById(PeriodicTable.viewId[i]);
 
-                // Get the periodic table information for each atom(각 원소에 대한 주기율표 정보를 가져옴)
-                final Atom atom = PeriodicTable.periodicTableList[i];
-
-                atomView.setAllColor(Color.argb(255, 255, 255, 255));
-                atomView.setIon("");
-                atomView.setName(atom.getK_name());
-                atomView.invalidate();
+                imageButton.setBackgroundResource(PeriodicTable.buttonId[i][0]);
             }
         }
     }
@@ -107,55 +100,176 @@ public class MainActivity extends Activity {
         for (int i = 1; i < PeriodicTable.periodicTableList.length; i++) {
 
             // Give ID for each atomView(각 atomView에 ID 부여)
-            AtomView atomView = (AtomView) findViewById(PeriodicTable.viewId[i]);
+            final ImageButton imageButton = (ImageButton) findViewById(PeriodicTable.viewId[i]);
 
-            // Get the periodic table information for each atom(각 원소에 대한 주기율표 정보를 가져옴)
-            final Atom atom = PeriodicTable.periodicTableList[i];
-
-            atomView.setNumber(atom.getA_num());
-            atomView.setName(atom.getK_name());
-            atomView.setSymbol(atom.getSymbol());
-
-            atomView.invalidate();
+            imageButton.setBackgroundResource(PeriodicTable.buttonId[i][0]);
 
             //  Custom View 클릭 시 테두리 색이 변하는 것을 구현한 ClickListener
-            atomView.setOnClickListener(new View.OnClickListener() {
+            imageButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if (MainActivity.ionizeButton)
                         return;
 
-                    AtomView tempView = (AtomView) findViewById(v.getId());
+                    ImageButton tempButton = (ImageButton) findViewById(v.getId());
 
-                    int atomNumber = tempView.getNumber();
+                    int atomNumber;
+
+                    switch(v.getId()){
+                        case R.id.atomView1 :
+                            atomNumber = 1;
+                            break;
+                        case R.id.atomView2 :
+                            atomNumber = 2;
+                            break;
+                        case R.id.atomView3 :
+                            atomNumber = 3;
+                            break;
+                        case R.id.atomView4 :
+                            atomNumber = 4;
+                            break;
+                        case R.id.atomView5 :
+                            atomNumber = 5;
+                            break;
+                        case R.id.atomView6 :
+                            atomNumber = 6;
+                            break;
+                        case R.id.atomView7 :
+                            atomNumber = 7;
+                            break;
+                        case R.id.atomView8 :
+                            atomNumber = 8;
+                            break;
+                        case R.id.atomView9 :
+                            atomNumber = 9;
+                            break;
+                        case R.id.atomView10 :
+                            atomNumber = 10;
+                            break;
+                        case R.id.atomView11 :
+                            atomNumber = 11;
+                            break;
+                        case R.id.atomView12 :
+                            atomNumber = 12;
+                            break;
+                        case R.id.atomView13 :
+                            atomNumber = 13;
+                            break;
+                        case R.id.atomView14 :
+                            atomNumber = 14;
+                            break;
+                        case R.id.atomView15 :
+                            atomNumber = 15;
+                            break;
+                        case R.id.atomView16 :
+                            atomNumber = 16;
+                            break;
+                        case R.id.atomView17 :
+                            atomNumber = 17;
+                            break;
+                        case R.id.atomView18 :
+                            atomNumber = 18;
+                            break;
+                        case R.id.atomView19 :
+                            atomNumber = 19;
+                            break;
+                        case R.id.atomView20 :
+                            atomNumber = 20;
+                            break;
+                        default:
+                            atomNumber = 1;
+                    }
+
                     int flag = PeriodicTable.periodicTableList[atomNumber].getFlag();
 
                     if (flag == 0) {        // 한 번 클릭 시 테두리 빨간색으로
                         PeriodicTable.periodicTableList[atomNumber].setFlag(1);
-                        tempView.setAllColor(Color.argb(255, 255, 153, 204));
+                        tempButton.setBackgroundResource(PeriodicTable.buttonId[atomNumber][1]);
                     } else if (flag == 1) { // 두 번째 클릭 시 테두리 노란색으로
                         PeriodicTable.periodicTableList[atomNumber].setFlag(2);
-                        tempView.setAllColor(Color.argb(255, 255, 255, 102));
+                        tempButton.setBackgroundResource(PeriodicTable.buttonId[atomNumber][2]);
                     } else if (flag == 2) { // 세 번째 클릭 시 테두리 흰색으로
                         PeriodicTable.periodicTableList[atomNumber].setFlag(0);
-                        tempView.setAllColor(Color.argb(255, 255, 255, 255));
+                        tempButton.setBackgroundResource(PeriodicTable.buttonId[atomNumber][0]);
                     }
-
-                    tempView.invalidate();
                 }
             });
 
             // 보기 좋게 만들기
 
             // Custom View 길게 클릭 시 Alert Dialog 출력하고 해당 원소에 대한 상세 정보 출력
-            atomView.setOnLongClickListener(new View.OnLongClickListener() {
+            imageButton.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
 
-                    AtomView tempView = (AtomView) findViewById(v.getId());
+                    ImageButton tempButton = (ImageButton) findViewById(v.getId());
 
-                    // 클릭한 원자 번호
-                    int atomNumber = tempView.getNumber();
+                    int atomNumber;
+
+                    switch(v.getId()){
+                        case R.id.atomView1 :
+                            atomNumber = 1;
+                            break;
+                        case R.id.atomView2 :
+                            atomNumber = 2;
+                            break;
+                        case R.id.atomView3 :
+                            atomNumber = 3;
+                            break;
+                        case R.id.atomView4 :
+                            atomNumber = 4;
+                            break;
+                        case R.id.atomView5 :
+                            atomNumber = 5;
+                            break;
+                        case R.id.atomView6 :
+                            atomNumber = 6;
+                            break;
+                        case R.id.atomView7 :
+                            atomNumber = 7;
+                            break;
+                        case R.id.atomView8 :
+                            atomNumber = 8;
+                            break;
+                        case R.id.atomView9 :
+                            atomNumber = 9;
+                            break;
+                        case R.id.atomView10 :
+                            atomNumber = 10;
+                            break;
+                        case R.id.atomView11 :
+                            atomNumber = 11;
+                            break;
+                        case R.id.atomView12 :
+                            atomNumber = 12;
+                            break;
+                        case R.id.atomView13 :
+                            atomNumber = 13;
+                            break;
+                        case R.id.atomView14 :
+                            atomNumber = 14;
+                            break;
+                        case R.id.atomView15 :
+                            atomNumber = 15;
+                            break;
+                        case R.id.atomView16 :
+                            atomNumber = 16;
+                            break;
+                        case R.id.atomView17 :
+                            atomNumber = 17;
+                            break;
+                        case R.id.atomView18 :
+                            atomNumber = 18;
+                            break;
+                        case R.id.atomView19 :
+                            atomNumber = 19;
+                            break;
+                        case R.id.atomView20 :
+                            atomNumber = 20;
+                            break;
+                        default:
+                            atomNumber = 1;
+                    }
 
                     Intent intent = new Intent(MainActivity.this, Atom_Info.class);
                     intent.putExtra(Atom_Info.NUM, atomNumber);
@@ -174,13 +288,11 @@ public class MainActivity extends Activity {
         for (int i = 1; i < PeriodicTable.periodicTableList.length; i++) {
 
             // 각 원자에 대한 id값을 AtomView에 할당해준다.
-            AtomView tempView = (AtomView) findViewById(PeriodicTable.viewId[i]);
+            ImageButton imageButton = (ImageButton) findViewById(PeriodicTable.viewId[i]);
 
-            tempView.setAllColor(Color.argb(255, 255, 255, 255));
+            imageButton.setBackgroundResource(PeriodicTable.buttonId[i][0]);
 
             PeriodicTable.periodicTableList[i].setFlag(0);
-
-            tempView.invalidate();
         }
     }
 

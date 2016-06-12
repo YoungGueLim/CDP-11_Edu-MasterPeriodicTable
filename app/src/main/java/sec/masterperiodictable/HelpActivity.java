@@ -2,6 +2,7 @@ package sec.masterperiodictable;
 
 import android.app.Activity;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -13,6 +14,8 @@ public class HelpActivity extends Activity {
         setContentView(R.layout.activity_help);
 
         TextView textView = (TextView) findViewById(R.id.helpTextView);
+        Typeface font = Typeface.createFromAsset(this.getAssets(),"InterparkGothicBold.ttf");
+        textView.setTypeface(font);
         textView.setText("1. 주기율표의 원소를 오래 누르면 해당 원소의 정보를 볼 수 있습니다.\n\n" +
                         "2. 주기율표의 원소들을 짧게 클릭하여 클릭된 원소들을 포함하는 화합물을 검색할 수 있습니다." +
                         " 주기율표의 원소를 짧게 한번 클릭하면 붉은 색으로 표시되고, 주기율표의 원소를 짧게 한번 더 클릭하면" +

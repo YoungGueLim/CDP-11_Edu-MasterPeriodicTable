@@ -2,7 +2,10 @@ package sec.masterperiodictable;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -16,12 +19,18 @@ import sec.masterperiodictable.Data.PeriodicTable;
 
 public class Atom_Info extends Activity {
 
+    Typeface font;
+    ListView listView;
+
+
     public static String NUM = "number";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_atom__info);
+
+        font = Typeface.createFromAsset(this.getAssets(),"InterparkGothicBold.ttf");
 
         Intent intent = getIntent();
         int atomNumber = intent.getIntExtra(NUM, 0);
@@ -34,6 +43,10 @@ public class Atom_Info extends Activity {
 
         // Description
         TextView des = (TextView) findViewById(R.id.desView);
+
+        symbol.setTypeface(font);
+        name.setTypeface(font);
+        des.setTypeface(font);
 
         Atom temp = PeriodicTable.periodicTableList[atomNumber];
 
@@ -53,7 +66,7 @@ public class Atom_Info extends Activity {
             listString.add(atom.getA_num() + " " + atom.getSymbol() + " " + atom.getK_name());
         }
 
-        ListView listView = (ListView) findViewById(R.id.listView);
+        listView = (ListView) findViewById(R.id.listView);
         listView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listString));
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -73,6 +86,7 @@ public class Atom_Info extends Activity {
                 description2 += "\n녹는점: " + temp.getM_point() + ", 끓는점: " + temp.getB_point();
 
                 des2.setText(description2);
+
             }
 
         });
