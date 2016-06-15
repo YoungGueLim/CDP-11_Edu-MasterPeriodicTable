@@ -164,8 +164,8 @@ public class PeriodicTable {
             {R.drawable.orange20,R.drawable.lightgray20,R.drawable.gray20,R.drawable.ionize20}
     };
 
-    public static ArrayList<Integer> red;
-    public static ArrayList<Integer> yellow;
+    public static ArrayList<Integer> red = new ArrayList<Integer>();
+    public static ArrayList<Integer> yellow = new ArrayList<Integer>();
 
 }
 

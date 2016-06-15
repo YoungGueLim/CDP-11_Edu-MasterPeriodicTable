@@ -30,7 +30,6 @@ public class ObjectReaderActivity extends RendererActivity implements GestureDet
         myLight.diffuse.setAll(10, 10, 10, 255);
         scene.lights().add(myLight);
 
-        Log.d("moleType1","11111111111");
         Intent intent_ora = getIntent();
         String moleType = intent_ora.getStringExtra("MoleType");
         Log.d("moleType",moleType);
@@ -80,9 +79,9 @@ public class ObjectReaderActivity extends RendererActivity implements GestureDet
 
     @Override
     public void onShowPress(MotionEvent e) {
-        molecule.scale().x += 0.01F;
-        molecule.scale().y += 0.01F;
-        molecule.scale().z += 0.01F;
+        //molecule.scale().x += 0.01F;
+        //molecule.scale().y += 0.01F;
+        //molecule.scale().z += 0.01F;
     }
 
     @Override

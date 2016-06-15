@@ -299,6 +299,9 @@ public class MainActivity extends Activity {
     public void search(View v) {
         int flag = 0;
 
+        PeriodicTable.red.clear();
+        PeriodicTable.yellow.clear();
+
         ArrayList<Atom> redChecked = new ArrayList<Atom>();
         ArrayList<Atom> yellowChecked = new ArrayList<Atom>();
 
