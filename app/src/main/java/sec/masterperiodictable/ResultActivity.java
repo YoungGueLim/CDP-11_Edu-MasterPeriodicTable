@@ -25,7 +25,7 @@ public class ResultActivity extends Activity {
 
     public static String NO = "NO";
 
-    public static ArrayList<Integer> arrayList;
+    private ArrayList<Integer> arrayList;
 
     private int location = 0;
 
@@ -38,7 +38,7 @@ public class ResultActivity extends Activity {
         Typeface font = Typeface.createFromAsset(this.getAssets(),"InterparkGothicBold.ttf");
 
         final Intent intent = getIntent();
-        int flag = intent.getIntExtra(NO, 2);
+        int flag = intent.getIntExtra(NO,2);
 
         final TextView textView1 = (TextView) findViewById(R.id.resultSymbolView);
         TextView textView2 = (TextView) findViewById(R.id.resultFormulaView);
@@ -68,6 +68,9 @@ public class ResultActivity extends Activity {
             textView1.setText("");
             textView2.setText("");
             textView3.setText("");
+            ImageButton button = (ImageButton) findViewById(R.id.modelButton);
+
+            button.setVisibility(View.INVISIBLE);
         } else {
             for (int set : arrayList) {
                 arrayList2.add(MainActivity.moleList.getMlist().get(set).getK_name());

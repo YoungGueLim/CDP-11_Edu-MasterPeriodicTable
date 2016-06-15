@@ -59,7 +59,7 @@ public class MoleList {
         temp = new Molecule(count++, "염화수소", "HCl", "H<sub><small>2</small></sub> " +
                 "+ Cl<sub><small>2</small></sub> -> 2HCl");
         temp.add_Key(1);
-        temp.add_Key(9);
+        temp.add_Key(17);
         temp.setDes("화학식 HCl. 상온에서 자극적인 냄새가 나는 무색 기체. 알코올 ·에테르 ·벤젠 등에도 잘 녹는다. 진한 황산에 진한 염산을 떨어뜨려 발생시키거나, 식염과 진한 황산을 반응시켜서 만든다.");
         mlist.add(temp);
 
@@ -73,9 +73,9 @@ public class MoleList {
 
         temp = new Molecule(count++, "수산화리튬", "LiOH", "Li<sub><small>2</small></sub>O " +
                 "+ H<sub><small>2</small></sub>O -> 2LiOH");
+        temp.add_Key(1);
         temp.add_Key(3);
         temp.add_Key(8);
-        temp.add_Key(17);
         temp.setDes("무수물은 무색 정방정계의 결정이며 비중 1.43, 녹는점 445℃ , 끓는점 약 925℃ 이다." +
                 "이산화탄소 흡수제, 리튬베이스그리스, 리튬비누 및 리튬화합물 제조의 원료, 사진현상약 등으로 사용된다.");
         mlist.add(temp);
@@ -91,7 +91,6 @@ public class MoleList {
                 "+ F<sub><small>2</small></sub> -> 2LiF");
         temp.add_Key(3);
         temp.add_Key(8);
-        temp.add_Key(17);
         temp.setDes("플루오르화수소산에 탄산리튬을 더하여, 증발 건고 후 적열해서 얻을 수 있다. 또 리튬염 용액에 플루오르화칼륨 용액을 더하여 침전으로 얻을 수 있다.");
         mlist.add(temp);
 
@@ -405,20 +404,18 @@ public class MoleList {
         mlist.add(temp);
 
         temp = new Molecule(count++, "에탄", "C<sub><small>2</small></sub>H<sub><small>6</small></sub>", "C " +
-                "+ 2H<sub><small>2</small></sub> -> CH<sub><small>4</small></sub>");
+                "+ 2H<sub><small>2</small></sub> -> C<sub><small>2</small></sub>H<sub><small>6</small></sub>");
         temp.add_Key(1);
         temp.add_Key(6);
-        temp.setDes("가장 간단한 유기 화합물로, 화학식은 CH4이며 천연 가스의 주성분이다. 무색, 무취인 가연성 기체로서, 끓는점이 -164℃로 매우 낮으므로 액화가 매우 어렵다. 메탄의 구조는 정사면체의 중심에 탄소가 있고 정사면체의 꼭짓점에 수소가 있는 모양이다. 대칭 구조이므로 무극성을 띠고, 물에 용해되기 어렵다. 메탄 분자를 구성하는 탄소 원자와 수소 원자의 결합이 비교적 안정하기 때문에 쉽게 반응하지 않지만, 자외선을 쬐면 탄소와 수소의 결합이 끊어지면서 탄소와 염소의 결합이 형성된다.");
+        temp.setDes("천연 가스나 원유에 일부 함유되어 있는 탄화수소인 에탄(에테인)은 탄소가 2개인 지방족 포화탄화수소이며, 분자식은 C2H6이다. 탄소 원자는 4개의 결합이 되어 있으므로 입체적인 구조를 갖는다. 2개의 탄소 원자를 축으로 회전이 가능하여 그 구조는 시시각각으로 변화한다. 에탄은 다른 알칸(알케인)족의 화합물과 마찬가지로 치환 반응을 한다. 염소와의 치환 반응에 의하여 만들어진 치환체 중에서 1, 2-다이클로로 에테인은 마치 기하 이성질체를 갖는 것처럼 보이지만 두 탄소 원자를 축으로 회전하므로 2개의 구조는 이성질체가 아닌 동일한 구조이다. 무색 무취의 가스인 에테인은 유기 합성 화학 공업의 기초 원료, 냉매, 연료로 쓰인다. 산화물에 의한 반응성은 강하지 않지만 인화 폭발의 위험성이 크다.");
         mlist.add(temp);
 
         temp = new Molecule(count++, "아세트아미노펜", "C<sub><small>2</small></sub>H<sub><small>6</small></sub>", "C " +
                 "+ 2H<sub><small>2</small></sub> -> CH<sub><small>4</small></sub>");
         temp.add_Key(1);
         temp.add_Key(6);
-        temp.setDes("진통해열제의 성분명. 항염증 효과는 약하지만 진통 및 해열 효과가 뛰어나 발열이나 통증, 두통, 치통 등을 가라앉히는 데 널리 쓰인다.");
+        temp.setDes("아세트아미노펜은 페놀에 질산나트륨을 사용해 질산화를 한 후 para-니트로페놀과 ortho-니트로페놀이 생성된다. 이때  para형만 분리하여 니트로기를 sodium borohydride로 환원한다. 그 결과로 4-aminophenol이 생성되는데 무수아세트산으로 아세틸화 하면 아세트아미노펜이 된다.");
         mlist.add(temp);
-
-        //에탄 아세트아미노펜 분자식 및 반응식 보충 필요!!!!!!!!!!!!!!!!!!!!
     }
 
     public ArrayList<Molecule> getMlist() {

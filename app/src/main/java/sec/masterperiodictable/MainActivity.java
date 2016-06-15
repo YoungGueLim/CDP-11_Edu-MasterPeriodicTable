@@ -44,6 +44,8 @@ public class MainActivity extends Activity {
 
         setContentView(R.layout.activity_main);
 
+        moleList = new MoleList();
+
         Typeface font = Typeface.createFromAsset(this.getAssets(),"InterparkGothicBold.ttf");
         TextView temp = (TextView) findViewById(R.id.titleView);
         temp.setTypeface(font);
@@ -89,11 +91,12 @@ public class MainActivity extends Activity {
 
     // Initialize Periodic Table
     private void initPeriodicTable() {
-        moleList = new MoleList();
 
-        for (Molecule molecule : moleList.getMlist()) {
-            for (int atom : molecule.getA_key()) {
-                PeriodicTable.periodicTableList[atom].addMlist(molecule.getKey());
+        if(PeriodicTable.periodicTableList[1].getMlist().size() == 0) {
+            for (Molecule molecule : moleList.getMlist()) {
+                for (int atom : molecule.getA_key()) {
+                    PeriodicTable.periodicTableList[atom].addMlist(molecule.getKey());
+                }
             }
         }
 
@@ -103,6 +106,7 @@ public class MainActivity extends Activity {
             final ImageButton imageButton = (ImageButton) findViewById(PeriodicTable.viewId[i]);
 
             imageButton.setBackgroundResource(PeriodicTable.buttonId[i][0]);
+            PeriodicTable.periodicTableList[i].setFlag(0);
 
             //  Custom View 클릭 시 테두리 색이 변하는 것을 구현한 ClickListener
             imageButton.setOnClickListener(new View.OnClickListener() {
@@ -313,8 +317,8 @@ public class MainActivity extends Activity {
                 yellowChecked.add(atom);
         }
 
-        ArrayList<Integer> temp;
-        ArrayList<Integer> temp2;
+        ArrayList<Integer> temp = new ArrayList<Integer>();
+        ArrayList<Integer> temp2 = new ArrayList<Integer>();
 
         if (redChecked.size() == 0)
             flag = 1;
@@ -323,7 +327,6 @@ public class MainActivity extends Activity {
 
             for (Atom atom : redChecked) {
                 temp2 = (ArrayList<Integer>) temp.clone();
-
                 for (int sel : temp2) {
                     if (!atom.isThereAtom(sel)) {
                         temp.remove(Integer.valueOf(sel));
@@ -375,4 +378,8 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
 
+    @Override
+    public void onStop(){
+        super.onStop();
+    }
 }
